@@ -1,18 +1,25 @@
 {
-  "name": "nodejs_backend_with_mongodb",
+  "name": "my_first_full_stack_note_app",
   "version": "1.0.0",
-  "description": "",
+  "description": "ExpressJS Full Stack Project",
   "license": "ISC",
   "author": "",
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": " npx nodemon index.js"
+    "start": "node backend/server.js",
+    "dev": "npx nodemon backend/server.js"
   },
   "dependencies": {
-    "dotenv": "^17.4.1",
-    "mongodb": "^7.1.1",
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "express-async-handler": "^1.2.0",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.6.0"
+  },
+  "devDependencies": {
     "nodemon": "^3.1.14"
   }
 }

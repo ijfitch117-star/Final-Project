@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+</head>
+<body>
+  <div class = "loginBox">
+
+    <h1>Login</h1>
+    <p>Sign in to edit services</p>
+      <form id="loginForm">
+        <div>
+          <label>Email:</label><br>
+          <input type="email" id="email" required>
+        </div>
+        <br>
+        <div>
+          <label>Password:</label><br>
+          <input type="password" id="password" required>
+        </div>
+        <br>
+        <button id = "loginBtn"ype="submit">Login</button>
+      </form>
+
+    <p id="errorMsg" style="color:red;"></p>
+
+    <p>Don't have an account? <a href="register.html">Register here</a></p>
+  </div>
+  <script src="js/auth.js"></script>
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        height: 100vh;
+        background: #b3d9ff;
+        padding-top: 200px;
+    }
+
+    .loginBox {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding: 30px;
+        border: 1px solid black;
+        background: #f4f6f8;
+        border-radius:5px;
+    }
+    #loginBtn{
+        width:40px;
+        background:white;
+        border:1px solid black;
+        border-radius:1px;
+    }
+
+  </style>
+</body>
+</html>

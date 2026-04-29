@@ -3,290 +3,610 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Service List</title>
+    <title>Nutrio</title>
+
 </head>
 <body>
-    <p><a href="/logout">Logout</a></p>
-    <hr>
+    <div class="container">
+        <!-- Navbar -->
+         <header>
+            <nav class = "nav">   
+                <div class="logogrp">
+                    <img id="logo" href = "#welcome" src="https://raw.githubusercontent.com/ijfitch117-star/Assignment-3/main/mbr.jpg">
+                    <h1>Nutrio</h1>
+                </div>
 
-    <h1>Services</h1>
+                <button class="hamburger" id="menu-btn">☰</button>
+                <div class="navbar" id="menu">
+                    <a href="#features">Features</a>
+                    <a href="#about">About</a>
+                    <a href="#price">Pricing</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#login">Login</a>
+                </div>
+                <button class="navbtn" onclick="location.href= '#sign'">Start Now!</button>
+            </nav>
+        </header>
+        <main class="main">
+            <!-- Welcome -->
+            <section class = "welcome" id="welcome">   
+                <h1> Welcome to Nutrio!</h1>
+                <br>
+                <p> We're dedicated to helping you make the best decisions regarding your calorie intake!</p>
+                <button id="welbtn" onclick="location.href='#about'"> Explore!</button>
+            </section>
 
-    <h2>Add a service</h2>
-    <input type="text" id="name" placeholder="Name">
-    <input type="number" id="price" placeholder="Price">
-    <input type="text" id="description" placeholder="Description">
-    <button id="addBtn">Add service</button>
-    <p id="message"></p>
+            <!-- About -->
+            <section class = "about" id="about">   
+                <div class="about_blocks">
+                    <div>
+                        <h1>Weight management</h1>
+                        <br></br>
+                        <p>Nutrio helps you understand your daily calorie needs so you can manage your weight with clarity, not guesswork. Track what you eat, stay consistent, and make progress that actually fits your lifestyle.</p>
+                    </div>
+                    <div>
+                        <h1>Healthier living</h1>
+                        <br></br>
+                        <p>Build better habits by becoming more aware of what you eat every day. Nutrio turns mindful nutrition into a simple routine that supports long-term, healthier living.</p>
+                    </div>
+                    <div>
+                        <h1>Fitness nutrition</h1>
+                        <br></br>
+                        <p>Fuel your workouts with smarter nutrition insights tailored to your goals. Nutrio makes it easy to balance calories and macros so your body gets what it needs to perform and recover.</p>
+                    </div>
+                </div>
+                <img id = "aboutimg" src="https://raw.githubusercontent.com/ijfitch117-star/Assignment-3/main/mbr-3.jpg">
+            </section>
 
-    <h2>Update a service</h2>
-    <input type="text" id="updateId" placeholder="service _id">
-    <input type="text" id="updateName" placeholder="New Name (optional)">
-    <input type="number" id="updatePrice" placeholder="New Price (optional)">
-    <input type="text" id="updateDescription" placeholder="New Description (optional)">
-    <button id="updateBtn">Update service</button>
-    <p id="updateMessage"></p>
+            <!-- Why Nutrio? -->
+            <section class="why" id="features">   
+                <div class="why_top">
+                    <h1>Why Nutrio?</h1>
+                    <br></br>
+                    <p>Nutrio is designed to make nutrition information simple, clear, and easy to understand. Instead of overwhelming users with unnecessary details, Nutrio focuses on presenting information in a clean and structured way.</p>
+                </div>
+                <div class="why_blocks">
+                    <div>
+                        <img class = "whyimg" src="https://raw.githubusercontent.com/ijfitch117-star/Assignment-3/main/mbr.png">
+                        <h1>Easy to use</h1>
+                        <p>A straightforward layout helps users find information quickly without confusion.</p>
+                    </div>
+                    <div>
+                        <img class = "whyimg" src="https://raw.githubusercontent.com/ijfitch117-star/Assignment-3/main/mbr-2.png">
+                        <h1>Modern Design</h1>
+                        <p>A clean visual style creates a pleasant experience across all devices.</p>
+                    </div>
+                    <div>
+                        <img class = "whyimg" src="https://raw.githubusercontent.com/ijfitch117-star/Assignment-3/main/mbr-9.jpg">
+                        <h1>Clear Organization</h1>
+                        <p>Content is divided into well-defined sections, making it easier to find and use.</p>
+                    </div>
+                </div>
+                <div class="whybot">
+                    <img class = "whyimg" src="https://raw.githubusercontent.com/ijfitch117-star/Assignment-3/main/mbr-20.jpg">
+                    <h1>Focused Experience </h1>
+                    <p>Nutrio prioritizes simplicity and clarity, allowing users to focus on what matters most.</p>
+                </div>
+            </section>
 
-    <h2>Delete a service</h2>
-    <input type="text" id="deleteId" placeholder="service _id">
-    <button id="deleteBtn">Delete service</button>
-    <p id="deleteMessage"></p>
+            <!-- Pricing -->
+            <section class="price" id="price">   
+                <h1>Pricing</h1>
+                <div class="price_blocks" id="price_blocks">
 
-    <h2>All services</h2>
-    <button id="fetchBtn">Fetch services</button>
-    <div id="services"></div>
+                </div>
+            </section>
 
-    <script>
-        // POST - Add a service
-        document.getElementById('addBtn').addEventListener('click', () => {
-            const name = document.getElementById('name').value;
-            const price = document.getElementById('price').value;
-            const description = document.getElementById('description').value;
+            <!-- Contact -->
+            <section class= "contact" id="contact">   
+                <h1>Got feedback? Let us know!</h1>
+                <div class="contact_blocks">
+                    <div class="card">
+                        <h1>Address</h1>
+                        <br>
+                        <p>4100 Ross Street, Okawville, IL </p>
+                    </div>
+                    <div class="card">
+                        <h1>Email</h1>
+                        <br>
+                        <p>info@site.com Mon-Fri</p>
+                    </div>
+                </div>
+                <div class="contact_blocks">
+                    <div class="card">
+                        <h1>Phone</h1>
+                        <br>
+                        <p>0-800-123-4567 9:00am - 7:00pm Mon-Fri</p>
+                    </div>
+                    <div class="card">
+                        <h1>Socials</h1>
+                        <br>
+                        <p>X: https://x.com/fakeplaceholder</p>
+                        <br>
+                        <p>Facebook: https://www.facebook.com/fakeplaceholder</p>
+                    </div>
+                </div>
+            </section>
 
-            if (!name || !price) {
-                document.getElementById('message').textContent = 'Name and Price are required.';
-                return;
-            }
+            <!-- Sign up -->
+            <section class= "sign" id = "sign">   
+                <h1>Sign up today!</h1>
+                <div class="signup">
+                    <input type="text" placeholder="Enter your email here!">
+                    <button>Get Started</button>
+                </div>
+            </section>
+            <section class = "loginSection" class = "login" id="login">
+                <div class = "loginBox">
+                    <h1>Admin Login</h1>
+                    <form id="loginForm">
+                        <div>
+                        <label>Email:</label><br>
+                        <input type="text" id="email" required>
+                        </div>
+                        <br>
+                        <div>
+                        <label>Password:</label><br>
+                        <input type="password" id="password" required>
+                        </div>
+                        <br>
+                        <button id = "loginBtn" type="submit">Login</button>
+                    </form>
+                    <p id="errorMsg" style="color:red;"></p>
+                    <p>Need an account? <a href="register.html">Register here</a></p>
+                </div>
+            </section>
+        </main>
+        <!-- Copyright -->
+        <footer class= "footer">   
+            ©Copyright 2025 Nutrio - All Rights Reserved 
+        </footer>
 
-            fetch('/api', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    name,
-                    price: Number(price),
-                    description
-                })
-            })
-            .then(res => {
-                if (res.status === 401) {
-                    window.location.href = '/login';
-                    return null;
-                }
-                return res.json();
-            })
-            .then(data => {
-                if (!data) return;
+    </div>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        max-width: border-box;
+    }
+    
+    .container{
+        display: grid;
+        grid-template-areas:
+        "nav"
+        "main"
+        "footer"
+        ;
+        grid-template-rows:auto;
+    }
+    .header{
+        grid-area: nav;
+    }
+    .main{
+        grid-area: main;
+        display: grid;
+        grid-template-areas:
+        "welcome"
+        "about"
+        "why"
+        "price"
+        "contact"
+        "sign"
+        "login"
+        ;
+        grid-template-rows: .7fr 1fr 1fr 1fr .5fr .5fr .5fr;
+    }
+    .top{
+        grid-area: up;
+    }
+    .nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 80px;
+        background: #b3d9ff;
 
-                document.getElementById('message').textContent = 'Service added!';
-                document.getElementById('name').value = '';
-                document.getElementById('price').value = '';
-                document.getElementById('description').value = '';
-            })
-            .catch(() => {
-                document.getElementById('message').textContent = 'Error adding service.';
-            });
-        });
+        position: sticky;
+        top: 0;
+        
+    }
+    .nav h1{
+        font-size: 27px;
+    }
+    .navbar{
+        display: flex;
+        gap: 50px;
+        font-size: 25px;
+        flex: 1;
+        justify-content: center;
 
-        // PUT - Update a service
-        document.getElementById('updateBtn').addEventListener('click', () => {
-            const id = document.getElementById('updateId').value;
+    }
+    .navbar a{
+        text-decoration: none;
+        color: black;
+        font-weight: 500;
+    }
+    .navbtn{
+        padding: 20px 30px;
+        border: none;
+        background: rgb(34, 34, 34);
+        color: white;
+        border-radius: 100px;
+        font-size: 20px;
+        text-wrap: nowrap;
+    }
+    #logo{
+        border-radius: 50px;
+        height: 60px;
+    }
+    .logogrp{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .welcome{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        grid-area: welcome;
+        background-image: url("https://raw.githubusercontent.com/ijfitch117-star/Assignment-3/main/mbr-8.jpg");
+        background-size: cover;
+        background-position: center;
+        text-align: center;
+        color: rgb(34, 34, 34);
+    }
+    .welcome h1{
+        font-size: 50px;
+        color: rgb(34, 34, 34);
+        text-shadow: black;
+    }
+    .welcome p{
+        font-size: 25px;
+        padding: 20px;
+    }
 
-            if (!id) {
-                document.getElementById('updateMessage').textContent = 'service _id is required.';
-                return;
-            }
+    #welbtn{
+        align-self: center;
+        padding: 20px 30px;
+        border: none;
+        background: rgb(34, 34, 34);
+        color: white;
+        border-radius: 100px;
+        font-size: 20px;
+    }
+    .about{
+        grid-area: about;
+        display: flex;
+        background: #f4f6f8;
+        padding: 10px;
+        gap: 40px;
+        justify-content: center;
+    }
+    .about h1{
+        font-size: 27px;
+    }
+    .about p{
+        font-size: 20px;
+    }
+    .about_blocks{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        max-width:600px;
+    }
+    .about_blocks div{
+        background: white;
+        padding: 20px;
+        border-radius: 15px;
+        flex: 1;
+        text-align: left;
+        font-size: 20px;
+    }
 
-            const updates = {};
+    #aboutimg{
+        height: 350px;
+        border-radius: 25px;
+    }
+    .why{
+        background-image: url("https://raw.githubusercontent.com/ijfitch117-star/Assignment-3/main/mbr-21.jpg");
+        background-size: cover;
+        background-position: center;
+        grid-area: why;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        color: whitesmoke;
+    }
+    .why_top{
+        max-width: 700px;
+        text-align: center;
+    }
+    .why p{
+        font-size: 20px;
+    }
+    .why_blocks{
+        display: flex;
+        gap: 40px;
+        margin-top: 50px;
+        align-content: center;
 
-            const name = document.getElementById('updateName').value;
-            const price = document.getElementById('updatePrice').value;
-            const description = document.getElementById('updateDescription').value;
+    }
+    .why_blocks div{
+        flex: 1;
+        display: flex;
+        max-width: 400px;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 
-            if (name) updates.name = name;
-            if (price) updates.price = Number(price);
-            if (description) updates.description = description;
+    .whybot{
+        margin-top: 40px;
+        align-items: center;
+        text-align: center;
+    }
+    .whyimg{
+        object-fit: cover;
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        align-content: center;
+    }
+    .price{
+        grid-area: price;
+        background: #f4f6f8;
+        align-items: center;
+        text-align: center;
+    }
+    .price h1{
+        font-size: 35px;
+    }
+    .price_blocks{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        margin-top: 50px;
+        justify-content: center;
+    }
+    .price_blocks div{
+        background: white;
+        padding: 40px;
+        border-radius: 15px;
+        flex: 1;
+        text-align: left;
+        font-size: 20px;
+        flex: 1 1 250px;
+        max-width: 500px;
+    }
+    .contact{
+        grid-area: contact;
+        background: #b3d9ff;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 20px;
+    }
+    .contact h1{
+        font-size: 35px;
+    }
+    .contact p{
+        font-size: 25px;
+    }
+    .contact_blocks{
+        display: flex;
+        gap: 40px;
+        margin-top:  50px;
+    }
+    .card{
+        background: white;
+        padding: 40px;
+        border-radius: 15px;
+        flex: 1;
+        text-align: left;
+        font-size: 20px;
+    }
+    .sign{
+        grid-area: sign;
+        background: #f4f6f8;
+        font-size: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
 
-            if (Object.keys(updates).length === 0) {
-                document.getElementById('updateMessage').textContent = 'Provide at least one field to update.';
-                return;
-            }
+    .sign input{
+        border-radius: 50px;
+        padding: 10px;
+        margin-top: 20px;
+        margin-right: 10px;
+        height: 50px;
+        width: 300px;
+    }
+    .sign button{
+        padding: 20px 30px;
+        border: 2px solid rgb(34, 34, 34);
+        background: transparent;
+        color: rgb(34, 34, 34);
+        border-radius: 100px;
+        font-size: 20px;
+    }
+    .footer{
+        grid-area: footer;
+        text-align: center;
+        padding: 30px;
+        background: #b3d9ff;
+        color: black;
+        font-size: 20px;
+    }
 
-            fetch(`/api/${id}`, {
-                method: 'PUT',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(updates)
-            })
-            .then(res => {
-                if (res.status === 401) {
-                    window.location.href = '/login';
-                    return null;
-                }
-                return res.json();
-            })
-            .then(data => {
-                if (!data) return;
+        .welcome, .about, .why, .price, .contact, .sign{
+        padding: 100px 80px;
 
-                document.getElementById('updateMessage').textContent = 'Service updated!';
-                document.getElementById('updateId').value = '';
-                document.getElementById('updateName').value = '';
-                document.getElementById('updatePrice').value = '';
-                document.getElementById('updateDescription').value = '';
-            })
-            .catch(() => {
-                document.getElementById('updateMessage').textContent = 'Error updating service.';
-            });
-        });
+    }
+    .hamburger{
+        display: none;
+        font-size: 30px;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+    .loginSection{
+        background:#b3d9ff;
+        padding:50px 20px;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
 
-        // DELETE - Delete a service
-        document.getElementById('deleteBtn').addEventListener('click', () => {
-            const id = document.getElementById('deleteId').value;
+    .loginBox{
+        width:420px;
+        max-width:100%;
+        display:flex;
+        flex-direction:column;
+        gap:15px;
+        padding:35px;
+        border:1px solid black;
+        background:#f4f6f8;
+        border-radius:12px;
+    }
 
-            if (!id) {
-                document.getElementById('deleteMessage').textContent = 'service _id is required.';
-                return;
-            }
+    .loginBox h1{
+        text-align:center;
+    }
 
-            fetch(`/api/${id}`, {
-                method: 'DELETE'
-            })
-            .then(res => {
-                if (res.status === 401) {
-                    window.location.href = '/login';
-                    return null;
-                }
-                return res.json();
-            })
-            .then(data => {
-                if (!data) return;
+    .loginBox form{
+        display:flex;
+        flex-direction:column;
+        gap:12px;
+    }
 
-                document.getElementById('deleteMessage').textContent = 'Service deleted!';
-                document.getElementById('deleteId').value = '';
-            })
-            .catch(() => {
-                document.getElementById('deleteMessage').textContent = 'Error deleting service.';
-            });
-        });
+    .loginBox input{
+        padding:12px;
+        border:1px solid black;
+        border-radius:6px;
+        font-size:18px;
+    }
 
-        // GET - Fetch all services
-        document.getElementById('fetchBtn').addEventListener('click', () => {
-            fetch('/api')
-            .then(res => {
-                if (res.status === 401) {
-                    window.location.href = '/login';
-                    return null;
-                }
-                return res.json();
-            })
-            .then(services => {
-                if (!services) return;
+    #loginBtn{
+        width:100%;
+        padding:12px;
+        background:#b3d9ff;
+        border:1px solid black;
+        border-radius:6px;
+        cursor:pointer;
+        font-size:18px;
+    }
 
-                const container = document.getElementById('services');
+    #errorMsg{
+        color:red;
+        font-size:16px;
+    }
 
-                if (services.length === 0) {
-                    container.innerHTML = '<p>No services found.</p>';
-                    return;
-                }
+    .loginBox a{
+        color:rgb(56,119,255);
+        text-decoration:none;
+    }
 
-                let html = '<ul>';
+@media (max-width: 900px) {
+    .main{
+        grid-template-rows: auto;
+    }
+    .nav{
+        position: sticky;
+        padding: 20px;
+    }
+    .hamburger{
+        display: block;
+        margin-left: auto; 
+        position: relative;
+        z-index: 1100;   
+    }
+    .navbar{
+        display: none;
+        flex-direction: column;
+        gap: 15px;
+        position: absolute;
+        top: 100%;
+        right: 20px;
+        width: 220px;
+        background: #b3d9ff;
+        padding: 20px;
+        border-radius: 12px;
+        text-align: left;
+        
+    }
+    .navbar.active{
+        display: flex;
+    }
 
-                services.forEach(service => {
-                    html += `
-                        <li>
-                            <strong>${service.name}</strong><br>
-                            Price: ${service.price}<br>
-                            ${service.description ? 'Description: ' + service.description + '<br>': ''}
-                            <small>_id: ${service._id}</small><br>
-                            ${service.addedBy ? 'Added by: ' + service.addedBy : ''}
-                        </li>
-                    `;
-                });
-
-                html += '</ul>';
-                container.innerHTML = html;
-            })
-            .catch(() => {
-                document.getElementById('services').innerHTML = '<p>Error fetching services.</p>';
-            });
-        });
-    </script>
-    <style>  
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            background: #f4f6f8;
-            color: black;
-            padding: 30px;
-            font-size:20px;
-            display: grid;
-            justify-content: center;
-        }
-        h1 {
-            margin-bottom: 20px;
-            text-align: center;
-        }
-        h2 {
-            margin: 20px 0 10px;
-            color: black;
-        }
-
-        a {
-            text-decoration: none;
-            color: rgb(56, 119, 255);
-            cursor:pointer;
-        }
-
-        hr {
-            margin: 15px 0 25px;
-        }
-
-        body > * {
-            width: 700px;
-            max-width: 100%;
-        }
-
-        input {
-            padding: 10px;
-            margin: 5px 5px 10px 0;
-            border: 1px solid black;
-            border-radius: 6px;
-            width: 220px;
-        }
-        button {
-            padding: 10px 16px;
-            border: 1px solid black;
-            background: #b3d9ff;
-            color: black;
-            border-radius: 6px;
-            margin-top: 5px;
-            cursor: pointer;
-        }
-
-        p {
-            margin-top: 8px;
-            font-size: 14px;
-        }
-        #services {
-            margin-top: 20px;
-        }
-
-        ul {
-            list-style: none;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            justify-content:center;
-        }
-
-        li {
-            display:flex;
-            flex-direction:column;
-            border: 1px solid black;
-            color: black;
-            padding: 10px;
-            border-radius: 8px;
-            width: 300px;
-            background:white;
-        }
-
-        small {
-            font-size:15px;
-            color: black;
-            font-style:italic;
-        }
+    .navbtn{
+        display: none;
+    }
+    .price_blocks{
+        justify-content: center;
+    }
+    .price{
+        padding: 60px 0px;
+    }
+    .about, .why_blocks, .contact_blocks, .price_blocks{
+        flex-direction: column;
+        align-items: center;
+    }
+    img{
+        max-width: 100%;
+    }
+    .price_blocks div, .about_blocks div, .card {
+        width: 100%;
+        max-width: 400px;
+        max-height: min-content;
+    }
+    .container{
+        grid-template-rows:auto;
+    }
+    
+}
 </style>
-    </style>
+<script>
+    const menuBtn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
+
+    menuBtn.addEventListener('click', () => {
+    menu.classList.toggle('active');
+});
+async function getServices() {
+
+    try {
+
+        const response = await fetch('/api/public/services');
+        const data = await response.json();
+
+        const priceContainer = document.getElementById('price_blocks');
+
+        for (let service of data) {
+
+            const serviceDiv = document.createElement('div');
+
+            serviceDiv.innerHTML = `
+                <h2>${service.name}</h2>
+                <h3>${service.price}</h3>
+                <br><br>
+                <p>${service.description}</p>
+            `;
+
+            priceContainer.appendChild(serviceDiv);
+        }
+
+    } catch (error) {
+        console.error('Error:', error);
+    }
+}
+getServices();
+</script>
+<script src="js/auth.js"></script>
+
 </body>
 </html>
