@@ -2,7 +2,7 @@
 //services.js
 // Base URL for all API requests
 // In production, change this to your live domain e.g. 'https://yoursite.com/api'
-const API_URL = 'http://localhost:5555/api' // dont forget to change this later
+const API_URL = 'https://finalproject-if.netlify.app/api' // dont forget to change this later
 
 // ===== PROTECT THE PAGE =====
 // Read the token that was saved to localStorage when the user logged in
