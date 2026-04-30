@@ -37,7 +37,7 @@ if (registerForm) {
 
       // Registration was successful — show a message then redirect to login after 1.5 seconds
       document.getElementById('successMsg').textContent = 'Registered! Redirecting to login...'
-      setTimeout(() => window.location.href = 'index.html', 1500)
+      setTimeout(() => window.location.href = 'index.html#login', 1500)
 
     } catch (err) {
       // This catch block runs if fetch itself failed — e.g. backend server is not running
