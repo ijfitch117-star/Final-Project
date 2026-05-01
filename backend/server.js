@@ -28,7 +28,9 @@ connectDB()
 
 // ── Express App Setup --------------------------
 const app = express()
-
+app.get('/api', (req, res) => {
+  res.json({ message: 'API is running' })
+})
 // ── Middleware Stack --------------------------
 // Order matters — these run top-to-bottom on every incoming request before hitting a route handler
 
