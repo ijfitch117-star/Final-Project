@@ -27,10 +27,9 @@ const setService = asyncHandler(async (req, res) => {
         throw new Error("Please add a name and price.")
     }
 
-    // Find the highest current manual id
+    
     const lastService = await Service.findOne().sort({ id: -1 })
 
-    // If no services exist yet, start at 1
     const nextId = lastService ? lastService.id + 1 : 1
 
     // Insert a new service document into MongoDB
