@@ -139,21 +139,22 @@
             <section class = "loginSection" class = "login" id="login">
                 <div class = "loginBox">
                     <h1>Admin Login</h1>
+                    <br>
                     <form id="loginForm">
                         <div>
-                        <label>Email:</label><br>
+                        <label class="loginLbl">Email:</label><br>
                         <input type="text" id="email" required>
                         </div>
                         <br>
                         <div>
-                        <label>Password:</label><br>
+                        <label class="loginLbl">Password:</label><br>
                         <input type="password" id="password" required>
                         </div>
                         <br>
                         <button id = "loginBtn" type="submit">Login</button>
                     </form>
                     <p id="errorMsg" style="color:red;"></p>
-                    <p>Need an account? <a href="register.html">Register here</a></p>
+                    <p> <a href="register.html">Register here</a></p>
                 </div>
             </section>
         </main>
@@ -235,6 +236,7 @@
         font-size: 20px;
         text-wrap: nowrap;
     }
+
     #logo{
         border-radius: 50px;
         height: 60px;
@@ -461,7 +463,6 @@
         justify-content:center;
         align-items:center;
     }
-
     .loginBox{
         width:420px;
         max-width:100%;
@@ -477,34 +478,36 @@
     .loginBox h1{
         text-align:center;
     }
-
     .loginBox form{
         display:flex;
         flex-direction:column;
         gap:12px;
+        align-items:center;
     }
-
     .loginBox input{
         padding:12px;
         border:1px solid black;
         border-radius:6px;
         font-size:18px;
     }
-
     #loginBtn{
-        width:100%;
+        width:25%;
         padding:12px;
         background:#b3d9ff;
         border:1px solid black;
         border-radius:6px;
         cursor:pointer;
         font-size:18px;
+        
     }
 
     #errorMsg{
         color:red;
         font-size:16px;
     }
+    .loginLbl{
+        font-size: 20px;
+    }f
 
     .loginBox a{
         color:rgb(56,119,255);

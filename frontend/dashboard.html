@@ -9,11 +9,13 @@
     <h1>My Services</h1>
 
 
-    <hr>
+    
 
     <!-- CREATE SERVICE -->
-    <h2>Create a Service</h2>
+    
     <form id="createServiceForm">
+    <h2>Create a Service</h2>
+    <hr>
     <input type="text" id="name" placeholder="Service Name" required>
     <input type="number" id="price" placeholder="Price" required>
     <input type="text" id="description" placeholder="Description">
@@ -22,15 +24,16 @@
 
     <p id="createMsg" style="color:green;"></p>
 
-    <hr>
+    
 
     <!-- ALL SERVICES -->
     <h2>All Services</h2>
     <div id="servicesList"></div>
 
+    <br>
+
     <!-- EDIT SERVICE (hidden until user clicks Edit) -->
     <div id="editSection" style="display:none;">
-    <hr>
 
     <h2>Edit Service</h2>
 
@@ -62,12 +65,27 @@
         display: grid;
         justify-content: center;
     }
+
+
+    #createServiceForm{
+        background-color:white;
+        border:1px solid black;
+        padding: 10px;
+        border-radius:5px;
+    }
+    
+    #editSection{
+        background-color:white;
+        border:1px solid black;
+        padding: 10px;
+        border-radius:5px;
+    }
     h1 {
         margin-bottom: 20px;
         text-align: center;
     }
     h2 {
-        margin: 20px 0 10px;
+        margin: 10px 0 10px;
         color: black;
     }
     a {
@@ -77,7 +95,7 @@
     }
     hr {
         margin: 15px 0 5px;
-        border:none;
+       border:none;
         border-top:1px solid black;
     }
     br {
@@ -93,7 +111,7 @@
         margin: 5px 5px 10px 0;
         border: 1px solid black;
         border-radius: 6px;
-        width: 220px;
+       width: 200px;
     }
     button {
         padding: 10px 16px;
@@ -109,17 +127,21 @@
         font-size: 14px;
     }
     #servicesList {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding:5px;
+        border-radius:5px;
     }
 
     .service {
-    border: 1px solid black;
-    color: #1d1919;
-    padding: 20px;
-    border-radius: 6px;
-    width: 220px;
+        color: black;
+        padding: 20px;
+        width: 220px;
+        margin: 0px;
+        border: 1px solid black;
+        border-radius:6px;
+        background: white;
     }
 
     .service button {

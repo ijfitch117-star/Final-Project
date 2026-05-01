@@ -1,7 +1,8 @@
 
 //services.js
 // Base URL for all API requests
-// In production, change this to your live domain e.g. 'https://yoursite.com/api'
+// In production, change this to your live domain e.g. 'https://final-project-ob7x.onrender.com/api'
+//http://localhost:5555/api
 const API_URL = 'https://final-project-ob7x.onrender.com/api' // dont forget to change this later
 
 // ===== PROTECT THE PAGE =====
